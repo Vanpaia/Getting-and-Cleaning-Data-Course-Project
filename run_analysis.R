@@ -96,7 +96,7 @@ DT <- data.table(subset_data)
 mean <- DT[, lapply(.SD, mean), by=list(Subject = DT$Subject, Activity = DT$Activity)]
 independent_data_who_dont_need_no_man <- arrange(mean, mean$Subject, mean$Activity)
 
-write.table(independent_data_who_dont_need_no_man, "tidy.dataset.mean.txt", row.name = FALSE)
+write.table(independent_data_who_dont_need_no_man, "tidy.dataset.mean.txt", row.name = FALSE, sep = "\t")
 
 wd <- getwd()
 
