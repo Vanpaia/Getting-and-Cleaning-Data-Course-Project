@@ -24,8 +24,26 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These signals were used to estimate variables of the feature vector for each pattern:  
 'XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
+## Transformation
+
+The different datasets were merged
+
+The dataset is subset to only the mean and standard devation variables
+
+The activity names replaced the activity identifier
+
+The labels were made more tidy
+
+The mean of different measurements of the same subject and activity was taken
+
 
 ## Tidy data
+
+The first variable is an identifier, the subject number which carried out the activity
+
+The second variable is an activity
+
+The later variables are the measurements
 
 The original data has been subset as well as transformed, the naming convention has stayed the same, however. The subset variables are the mean value, recognizable by the word "Mean" in front of the axial direction, and the standard deviation, recognizable by the word "Std" in the same place. The angle variable can be recognized by the word "angle" in front.
 
