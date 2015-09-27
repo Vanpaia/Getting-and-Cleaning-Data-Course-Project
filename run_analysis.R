@@ -85,9 +85,18 @@ subset_data$Activity <- act_labels[match(subset_data$Activity, act_labels$V1), '
 
 tidy_names <- names(subset_data)
 tidy_names <- gsub("mean", "Mean", tidy_names, ignore.case = FALSE)
-tidy_names <- gsub("std", "Std", tidy_names, ignore.case = FALSE)
+tidy_names <- gsub("std", "StandardDeviation", tidy_names, ignore.case = FALSE)
 tidy_names <- gsub("gravity", "Gravity", tidy_names, ignore.case = FALSE)
 tidy_names <- gsub(".", "", tidy_names, fixed = TRUE)
+tidy_names <- gsub("Acc", "Accelerometer", tidy_names, fixed = TRUE)
+tidy_names <- gsub("Gyro", "Gyroscope", tidy_names)
+tidy_names <- gsub("Mag", "Magnitude", tidy_names)
+tidy_names <- gsub("Freq", "Frequency", tidy_names)
+tidy_names <- gsub("angle", "Angle", tidy_names)
+tidy_names <- gsub("tB", "TimeB", tidy_names, ignore.case = FALSE)
+tidy_names <- gsub("tG", "TimeG", tidy_names, ignore.case = FALSE)
+tidy_names <- gsub("fB", "FrequencyB", tidy_names, ignore.case = FALSE)
+tidy_names <- gsub("fG", "FrequencyG", tidy_names, ignore.case = FALSE)
 names(subset_data) <- tidy_names
 
 # From that, create a second, independent tidy data set with the average of each variable for each activity and each subject.

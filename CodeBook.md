@@ -28,7 +28,7 @@ These signals were used to estimate variables of the feature vector for each pat
 
 The different datasets were merged
 
-The dataset is subset to only the mean and standard devation variables
+The dataset is subset to only the mean and standard devation variables. Not only the mean() and std() variables were chosen, but also the angle() variables that were mean values, as that fit the description of the excercise better.
 
 The activity names replaced the activity identifier
 
@@ -45,7 +45,9 @@ The second variable is an activity
 
 The later variables are the measurements
 
-The original data has been subset as well as transformed, the naming convention has stayed the same, however. The subset variables are the mean value, recognizable by the word "Mean" in front of the axial direction, and the standard deviation, recognizable by the word "Std" in the same place. The angle variable can be recognized by the word "angle" in front.
+The original data has been subset as well as transformed, the naming convention has stayed the same, however, the abbreviations have been expanded as well as the capitalization fixed to comply with tidy data standards.
+
+The subset variables are the mean value, recognizable by the word "Mean" in front of the axial direction, and the standard deviation, recognizable by the word "StandardDeviation" in the same place. The angle variable can be recognized by the word "Angle" in front.
 
 The features are normalized and bounded within [-1, 1]. This means that the measurements in the dataset don't have units but merely a normalized value between -1 and 1. This also explains why the standard deviation can be under 0.
 
@@ -58,181 +60,96 @@ The selected data still had a number of measurements per subject per activity. O
 
 The selected data is the following:
 
-*	tBodyAccMeanX
-
-*	tBodyAccMeanY
-
-*	tBodyAccMeanZ
-
-*	tGravityAccMeanX
-
-*	tGravityAccMeanY
-
-*	tGravityAccMeanZ
-
-*	tBodyAccJerkMeanX
-
-*	tBodyAccJerkMeanY
-
-*	tBodyAccJerkMeanZ
-
-*	tBodyGyroMeanX
-
-*	tBodyGyroMeanY
-
-*	tBodyGyroMeanZ
-
-*	tBodyGyroJerkMeanX
-
-*	tBodyGyroJerkMeanY
-
-*	tBodyGyroJerkMeanZ
-
-*	tBodyAccMagMean
-
-*	tGravityAccMagMean
-
-*	tBodyAccJerkMagMean
-
-*	tBodyGyroMagMean
-
-*	tBodyGyroJerkMagMean
-
-*	fBodyAccMeanX
-
-*	fBodyAccMeanY
-
-*	fBodyAccMeanZ
-
-*	fBodyAccMeanFreqX
-
-*	fBodyAccMeanFreqY
-
-*	fBodyAccMeanFreqZ
-
-*	fBodyAccJerkMeanX
-
-*	fBodyAccJerkMeanY
-
-*	fBodyAccJerkMeanZ
-
-*	fBodyAccJerkMeanFreqX
-
-*	fBodyAccJerkMeanFreqY
-
-*	fBodyAccJerkMeanFreqZ
-
-*	fBodyGyroMeanX
-
-*	fBodyGyroMeanY
-
-*	fBodyGyroMeanZ
-
-*	fBodyGyroMeanFreqX
-
-*	fBodyGyroMeanFreqY
-
-*	fBodyGyroMeanFreqZ
-
-*	fBodyAccMagMean
-
-*	fBodyAccMagMeanFreq
-
-*	fBodyBodyAccJerkMagMean
-
-*	fBodyBodyAccJerkMagMeanFreq
-
-*	fBodyBodyGyroMagMean
-
-*	fBodyBodyGyroMagMeanFreq
-
-*	fBodyBodyGyroJerkMagMean
-
-*	fBodyBodyGyroJerkMagMeanFreq
-
-*	angletBodyAccMeanGravity
-
-*	angletBodyAccJerkMeanGravityMean
-
-*	angletBodyGyroMeanGravityMean
-
-*	angletBodyGyroJerkMeanGravityMean
-
-*	angleXGravityMean
-
-*	angleYGravityMean
-
-*	angleZGravityMean
-
-*	tBodyAccStdX
-
-*	tBodyAccStdY
-
-*	tBodyAccStdZ
-
-*	tGravityAccStdX
-
-*	tGravityAccStdY
-
-*	tGravityAccStdZ
-
-*	tBodyAccJerkStdX
-
-*	tBodyAccJerkStdY
-
-*	tBodyAccJerkStdZ
-
-*	tBodyGyroStdX
-
-*	tBodyGyroStdY
-
-*	tBodyGyroStdZ
-
-*	tBodyGyroJerkStdX
-
-*	tBodyGyroJerkStdY
-
-*	tBodyGyroJerkStdZ
-
-*	tBodyAccMagStd
-
-*	tGravityAccMagStd
-
-*	tBodyAccJerkMagStd
-
-*	tBodyGyroMagStd
-
-*	tBodyGyroJerkMagStd
-
-*	fBodyAccStdX
-
-*	fBodyAccStdY
-
-*	fBodyAccStdZ
-
-*	fBodyAccJerkStdX
-
-*	fBodyAccJerkStdY
-
-*	fBodyAccJerkStdZ
-
-*	fBodyGyroStdX
-
-*	fBodyGyroStdY
-
-*	fBodyGyroStdZ
-
-*	fBodyAccMagStd
-
-*	fBodyBodyAccJerkMagStd
-
-*	fBodyBodyGyroMagStd
-
-*	fBodyBodyGyroJerkMagStd
-
-*	Activity
-
 *	Subject
+*	Activity
+*	TimeBodyAccelerometerMeanX
+*	TimeBodyAccelerometerMeanY
+*	TimeBodyAccelerometerMeanZ
+*	TimeGravityAccelerometerMeanX
+*	TimeGravityAccelerometerMeanY
+*	TimeGravityAccelerometerMeanZ
+*	TimeBodyAccelerometerJerkMeanX
+*	TimeBodyAccelerometerJerkMeanY
+*	TimeBodyAccelerometerJerkMeanZ
+*	TimeBodyGyroscopeMeanX
+*	TimeBodyGyroscopeMeanY
+*	TimeBodyGyroscopeMeanZ
+*	TimeBodyGyroscopeJerkMeanX
+*	TimeBodyGyroscopeJerkMeanY
+*	TimeBodyGyroscopeJerkMeanZ
+*	TimeBodyAccelerometerMagnitudeMean
+*	TimeGravityAccelerometerMagnitudeMean
+*	TimeBodyAccelerometerJerkMagnitudeMean
+*	TimeBodyGyroscopeMagnitudeMean
+*	TimeBodyGyroscopeJerkMagnitudeMean
+*	FrequencyBodyAccelerometerMeanX
+*	FrequencyBodyAccelerometerMeanY
+*	FrequencyBodyAccelerometerMeanZ
+*	FrequencyBodyAccelerometerMeanFrequencyX
+*	FrequencyBodyAccelerometerMeanFrequencyY
+*	FrequencyBodyAccelerometerMeanFrequencyZ
+*	FrequencyBodyAccelerometerJerkMeanX
+*	FrequencyBodyAccelerometerJerkMeanY
+*	FrequencyBodyAccelerometerJerkMeanZ
+*	FrequencyBodyAccelerometerJerkMeanFrequencyX
+*	FrequencyBodyAccelerometerJerkMeanFrequencyY
+*	FrequencyBodyAccelerometerJerkMeanFrequencyZ
+*	FrequencyBodyGyroscopeMeanX
+*	FrequencyBodyGyroscopeMeanY
+*	FrequencyBodyGyroscopeMeanZ
+*	FrequencyBodyGyroscopeMeanFrequencyX
+*	FrequencyBodyGyroscopeMeanFrequencyY
+*	FrequencyBodyGyroscopeMeanFrequencyZ
+*	FrequencyBodyAccelerometerMagnitudeMean
+*	FrequencyBodyAccelerometerMagnitudeMeanFrequency
+*	FrequencyBodyBodyAccelerometerJerkMagnitudeMean
+*	FrequencyBodyBodyAccelerometerJerkMagnitudeMeanFrequency
+*	FrequencyBodyBodyGyroscopeMagnitudeMean
+*	FrequencyBodyBodyGyroscopeMagnitudeMeanFrequency
+*	FrequencyBodyBodyGyroscopeJerkMagnitudeMean
+*	FrequencyBodyBodyGyroscopeJerkMagnitudeMeanFrequency
+*	AngleTimeBodyAccelerometerMeanGravity
+*	AngleTimeBodyAccelerometerJerkMeanGravityMean
+*	AngleTimeBodyGyroscopeMeanGravityMean
+*	AngleTimeBodyGyroscopeJerkMeanGravityMean
+*	AngleXGravityMean
+*	AngleYGravityMean
+*	AngleZGravityMean
+*	TimeBodyAccelerometerStandardDeviationX
+*	TimeBodyAccelerometerStandardDeviationY
+*	TimeBodyAccelerometerStandardDeviationZ
+*	TimeGravityAccelerometerStandardDeviationX
+*	TimeGravityAccelerometerStandardDeviationY
+*	TimeGravityAccelerometerStandardDeviationZ
+*	TimeBodyAccelerometerJerkStandardDeviationX
+*	TimeBodyAccelerometerJerkStandardDeviationY
+*	TimeBodyAccelerometerJerkStandardDeviationZ
+*	TimeBodyGyroscopeStandardDeviationX
+*	TimeBodyGyroscopeStandardDeviationY
+*	TimeBodyGyroscopeStandardDeviationZ
+*	TimeBodyGyroscopeJerkStandardDeviationX
+*	TimeBodyGyroscopeJerkStandardDeviationY
+*	TimeBodyGyroscopeJerkStandardDeviationZ
+*	TimeBodyAccelerometerMagnitudeStandardDeviation
+*	TimeGravityAccelerometerMagnitudeStandardDeviation
+*	TimeBodyAccelerometerJerkMagnitudeStandardDeviation
+*	TimeBodyGyroscopeMagnitudeStandardDeviation
+*	TimeBodyGyroscopeJerkMagnitudeStandardDeviation
+*	FrequencyBodyAccelerometerStandardDeviationX
+*	FrequencyBodyAccelerometerStandardDeviationY
+*	FrequencyBodyAccelerometerStandardDeviationZ
+*	FrequencyBodyAccelerometerJerkStandardDeviationX
+*	FrequencyBodyAccelerometerJerkStandardDeviationY
+*	FrequencyBodyAccelerometerJerkStandardDeviationZ
+*	FrequencyBodyGyroscopeStandardDeviationX
+*	FrequencyBodyGyroscopeStandardDeviationY
+*	FrequencyBodyGyroscopeStandardDeviationZ
+*	FrequencyBodyAccelerometerMagnitudeStandardDeviation
+*	FrequencyBodyBodyAccelerometerJerkMagnitudeStandardDeviation
+*	FrequencyBodyBodyGyroscopeMagnitudeStandardDeviation
+*	FrequencyBodyBodyGyroscopeJerkMagnitudeStandardDeviation
+
+
 
 License:
 ========
