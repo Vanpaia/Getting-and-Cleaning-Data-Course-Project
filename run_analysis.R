@@ -97,6 +97,7 @@ tidy_names <- gsub("tB", "TimeB", tidy_names, ignore.case = FALSE)
 tidy_names <- gsub("tG", "TimeG", tidy_names, ignore.case = FALSE)
 tidy_names <- gsub("fB", "FrequencyB", tidy_names, ignore.case = FALSE)
 tidy_names <- gsub("fG", "FrequencyG", tidy_names, ignore.case = FALSE)
+tidy_names <- gsub("BodyBody", "Body", tidy_names, ignore.case = FALSE)
 names(subset_data) <- tidy_names
 
 # From that, create a second, independent tidy data set with the average of each variable for each activity and each subject.

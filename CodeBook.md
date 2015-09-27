@@ -102,12 +102,12 @@ The selected data is the following:
 *	FrequencyBodyGyroscopeMeanFrequencyZ
 *	FrequencyBodyAccelerometerMagnitudeMean
 *	FrequencyBodyAccelerometerMagnitudeMeanFrequency
-*	FrequencyBodyBodyAccelerometerJerkMagnitudeMean
-*	FrequencyBodyBodyAccelerometerJerkMagnitudeMeanFrequency
-*	FrequencyBodyBodyGyroscopeMagnitudeMean
-*	FrequencyBodyBodyGyroscopeMagnitudeMeanFrequency
-*	FrequencyBodyBodyGyroscopeJerkMagnitudeMean
-*	FrequencyBodyBodyGyroscopeJerkMagnitudeMeanFrequency
+*	FrequencyBodyAccelerometerJerkMagnitudeMean
+*	FrequencyBodyAccelerometerJerkMagnitudeMeanFrequency
+*	FrequencyBodyGyroscopeMagnitudeMean
+*	FrequencyBodyGyroscopeMagnitudeMeanFrequency
+*	FrequencyBodyGyroscopeJerkMagnitudeMean
+*	FrequencyBodyGyroscopeJerkMagnitudeMeanFrequency
 *	AngleTimeBodyAccelerometerMeanGravity
 *	AngleTimeBodyAccelerometerJerkMeanGravityMean
 *	AngleTimeBodyGyroscopeMeanGravityMean
@@ -145,11 +145,9 @@ The selected data is the following:
 *	FrequencyBodyGyroscopeStandardDeviationY
 *	FrequencyBodyGyroscopeStandardDeviationZ
 *	FrequencyBodyAccelerometerMagnitudeStandardDeviation
-*	FrequencyBodyBodyAccelerometerJerkMagnitudeStandardDeviation
-*	FrequencyBodyBodyGyroscopeMagnitudeStandardDeviation
-*	FrequencyBodyBodyGyroscopeJerkMagnitudeStandardDeviation
-
-
+*	FrequencyBodyAccelerometerJerkMagnitudeStandardDeviation
+*	FrequencyBodyGyroscopeMagnitudeStandardDeviation
+*	FrequencyBodyGyroscopeJerkMagnitudeStandardDeviation
 
 License:
 ========
